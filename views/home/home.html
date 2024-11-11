@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Table</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center table on page */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f0f2f5;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header styling */
+    th {
+      background-color: #007bff;
+      color: #fff;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    /* Cell styling */
+    td {
+      padding: 0.75rem;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Alternating row colors */
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* Hover effect for rows */
+    tr:hover {
+      background-color: #e0e7ff;
+    }
+
+    button {
+      padding: 5px;
+      border: 1px solid grey;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <button id="bt-back">Back</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Username</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tb-data">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="./home.js"></script>
+</body>
+
+</html>

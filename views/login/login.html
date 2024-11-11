@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Centering the form on the page */
+    body,
+    html {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f3f3;
+    }
+
+    /* Form container */
+    .login-form {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Form heading */
+    .login-form h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Input fields */
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    /* Submit button */
+    .login-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Button hover effect */
+    .login-form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Link for additional options */
+    .login-form .signup-link {
+      margin-top: 1rem;
+      display: block;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .login-form .signup-link a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .login-form .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-form">
+    <h2>Login</h2>
+    <form action="#" method="post">
+      <input type="text" placeholder="Username" id="txt-username" required>
+      <input type="password" placeholder="Password" id="txt-password" required>
+      <button type="button" id="bt-login">Login</button>
+    </form>
+    <p class="signup-link">Don't have an account? <a href="#" id="signup">Sign up</a></p>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

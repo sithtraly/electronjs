@@ -1,0 +1,61 @@
+{
+  "name": "electronjs",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "build": {
+    "appId": "com.crud.kh.edu",
+    "productName": "Crud App",
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "keywords": [],
+  "author": "Traly",
+  "license": "ISC",
+  "description": "This app is build to create a crud app for learning purpose only",
+  "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.42",
+    "@sequelize/sqlite3": "^7.0.0-alpha.43",
+    "electron-squirrel-startup": "^1.0.1",
+    "jquery": "^3.7.1",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "@electron-forge/plugin-fuses": "^7.5.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^33.2.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "your-app-name",
+            "title": "Your App Name",
+            "noMsi": true
+          }
+        }
+      ]
+    }
+  }
+}

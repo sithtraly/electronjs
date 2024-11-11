@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Centering the form on the page */
+    body,
+    html {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f2f5;
+    }
+
+    /* Form container */
+    .register-form {
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* Form heading */
+    .register-form h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Input fields */
+    .register-form input[type="text"],
+    .register-form input[type="email"],
+    .register-form input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    /* Submit button */
+    .register-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Button hover effect */
+    .register-form button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Link for additional options */
+    .register-form .login-link {
+      margin-top: 1rem;
+      display: block;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .register-form .login-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .register-form .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="register-form">
+    <h2>Register</h2>
+    <form onsubmit="event.preventDefault()">
+      <input type="text" placeholder="Full Name" id="txt-name" required>
+      <input type="email" placeholder="Email Address" id="txt-email" required>
+      <input type="text" placeholder="Username" id="txt-username" required>
+      <input type="password" placeholder="Password" id="txt-password" required>
+      <button type="button" id="bt-register">Sign Up</button>
+    </form>
+    <p class="login-link">Already have an account? <a href="#" id="login">Log in</a></p>
+  </div>
+
+  <script src="./register.js"></script>
+</body>
+
+</html>
