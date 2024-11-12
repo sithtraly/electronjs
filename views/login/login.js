@@ -10,7 +10,7 @@ $('#bt-login').click(async function () {
   const user = await UserModel.findOne({ where: { username: username } })
   if (!user) return alert('User not found')
   if (password != user.dataValues.password) return alert('wrong password')
-  ipcRenderer.send('changeTo', 'home.html')
+  ipcRenderer.send('changeTo', route.home)
 })
 
 $('#signup').click(function () {
